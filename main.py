@@ -51,6 +51,11 @@ def triangle_area(base, height):
         raise ValueError("Base and height must be non-negative.")
     return 0.5 * base * height
 
+def circle_area(radius):
+    if radius < 0:
+        raise ValueError("Radius must be non-negative.")
+    return math.pi * radius**2
+
 # Test cases
 def test_should_return_area():
     assert rectangle_area(5, 10) == 50
