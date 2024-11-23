@@ -68,3 +68,10 @@ def test_should_return_area2():
     except ValueError as e:
         assert str(e) == "Base and height must be non-negative."
 
+def test_should_return_area3():
+    assert math.isclose(circle_area(7), 153.93804002589985)  # Approximation
+    assert circle_area(0) == 0
+    try:
+        circle_area(-7)
+    except ValueError as e:
+        assert str(e) == "Radius must be non-negative."
