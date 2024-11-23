@@ -1,7 +1,5 @@
 import math
 
-import math
-
 def rectangle_area(length, width):
     """
     Calculate the area of a rectangle.
@@ -34,25 +32,12 @@ def triangle_area(base, height):
     Raises:
         ValueError: If base or height is negative.
     """
-    """
-    Calculate the area of a triangle.
-
-    Parameters:
-        base (float): The base of the triangle. Must be non-negative.
-        height (float): The height of the triangle. Must be non-negative.
-
-    Returns:
-        float: The area of the triangle.
-
-    Raises:
-        ValueError: If base or height is negative.
-    """
     if base < 0 or height < 0:
         raise ValueError("Base and height must be non-negative.")
     return 0.5 * base * height
 
 def circle_area(radius):
-   """
+    """
     Calculate the area of a circle.
 
     Parameters:
@@ -64,7 +49,6 @@ def circle_area(radius):
     Raises:
         ValueError: If radius is negative.
     """
-
     if radius < 0:
         raise ValueError("Radius must be non-negative.")
     return math.pi * radius**2
@@ -93,3 +77,4 @@ def test_should_return_area3():
         circle_area(-7)
     except ValueError as e:
         assert str(e) == "Radius must be non-negative."
+
