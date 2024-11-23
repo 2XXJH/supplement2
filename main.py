@@ -1,6 +1,19 @@
 import math
 
 def rectangle_area(length, width):
+   """
+    Calculate the area of a rectangle.
+
+    Parameters:
+        length (float): The length of the rectangle. Must be non-negative.
+        width (float): The width of the rectangle. Must be non-negative.
+
+    Returns:
+        float: The area of the rectangle.
+
+    Raises:
+        ValueError: If length or width is negative.
+    """
     if length < 0 or width < 0:
         raise ValueError("Length and width must be non-negative.")
     return length * width
