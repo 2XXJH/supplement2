@@ -53,3 +53,20 @@ def test_should_return_area():
         rectangle_area(-5, 10)
     except ValueError as e:
         assert str(e) == "Length and width must be non-negative."
+
+def test_should_return_area2():
+    assert triangle_area(6, 8) == 24
+    assert triangle_area(0, 8) == 0
+    try:
+        triangle_area(-6, 8)
+    except ValueError as e:
+        assert str(e) == "Base and height must be non-negative."
+
+
+
+
+
+
+
+
+
