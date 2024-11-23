@@ -52,6 +52,19 @@ def triangle_area(base, height):
     return 0.5 * base * height
 
 def circle_area(radius):
+   """
+    Calculate the area of a circle.
+
+    Parameters:
+        radius (float): The radius of the circle. Must be non-negative.
+
+    Returns:
+        float: The area of the circle.
+
+    Raises:
+        ValueError: If radius is negative.
+    """
+
     if radius < 0:
         raise ValueError("Radius must be non-negative.")
     return math.pi * radius**2
