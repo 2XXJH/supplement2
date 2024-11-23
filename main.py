@@ -1,7 +1,9 @@
 import math
 
+import math
+
 def rectangle_area(length, width):
-   """
+    """
     Calculate the area of a rectangle.
 
     Parameters:
@@ -18,34 +20,38 @@ def rectangle_area(length, width):
         raise ValueError("Length and width must be non-negative.")
     return length * width
 
+def triangle_area(base, height):
+    """
+    Calculate the area of a triangle.
 
+    Parameters:
+        base (float): The base of the triangle. Must be non-negative.
+        height (float): The height of the triangle. Must be non-negative.
 
+    Returns:
+        float: The area of the triangle.
 
+    Raises:
+        ValueError: If base or height is negative.
+    """
+    """
+    Calculate the area of a triangle.
 
+    Parameters:
+        base (float): The base of the triangle. Must be non-negative.
+        height (float): The height of the triangle. Must be non-negative.
 
+    Returns:
+        float: The area of the triangle.
 
+    Raises:
+        ValueError: If base or height is negative.
+    """
+    if base < 0 or height < 0:
+        raise ValueError("Base and height must be non-negative.")
+    return 0.5 * base * height
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# Test cases
 def test_should_return_area():
     assert rectangle_area(5, 10) == 50
     assert rectangle_area(0, 10) == 0
@@ -61,12 +67,4 @@ def test_should_return_area2():
         triangle_area(-6, 8)
     except ValueError as e:
         assert str(e) == "Base and height must be non-negative."
-
-
-
-
-
-
-
-
 
